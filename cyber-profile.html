@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Enthusiast</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #0a192f;
+            color: #8892b0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            margin-bottom: 2rem;
+            padding: 2rem;
+            background-color: #112240;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .header-content {
+            flex: 1;
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 3px solid #64ffda;
+            transition: transform 0.3s ease;
+            object-fit: cover; /* This ensures the image covers the circular area properly */
+        }
+
+        .profile-image:hover {
+            transform: scale(1.05);
+        }
+
+        .content-wrapper {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .description {
+            background-color: #112240;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid #64ffda;
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .tryhackme-section {
+            background-color: #112240;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            height: fit-content;
+        }
+
+        h1 {
+            color: #64ffda;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+
+        .name {
+            color: #ccd6f6;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .alias {
+            color: #64ffda;
+            font-size: 1.5rem;
+            opacity: 0.9;
+        }
+
+        h2 {
+            color: #64ffda;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .animate-text {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .content-wrapper {
+                flex-direction: column;
+            }
+
+            .tryhackme-section {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="https://qph.cf2.quoracdn.net/main-qimg-c54c3e2dd59d4740ca919c28d0c1c8e1-lq" alt="Cybersecurity Enthusiast" class="profile-image">
+            <div class="header-content">
+                <h1>Cybersecurity Enthusiast</h1>
+                <div class="name">Subeg Suwal</div>
+                <div class="alias">glutto.n</div>
+            </div>
+        </header>
+
+        <div class="content-wrapper">
+            <div class="description animate-text">
+                <h2>About Me</h2>
+                <p>My interest in the field of cyber security has been longstanding, and I have consistently worked to stay informed and engaged with the latest trends, challenges, and developments in this rapidly evolving domain. I am deeply committed to enhancing my technical expertise and knowledge to become a proficient and seasoned professional in the field of cyber security.</p>
+                <br>
+                <p>My goal is to contribute meaningfully to the protection of digital assets and infrastructure by leveraging my skills in ethical hacking, threat analysis, and risk management. As the digital landscape continues to grow increasingly complex, I am dedicated to refining my ability to identify, assess, and mitigate potential cyber threats, ensuring a secure and resilient online environment.</p>
+                <br>
+                <p>Ultimately, I aim to establish myself as a highly skilled and knowledgeable practitioner in this dynamic industry.</p>
+            </div>
+
+            <div class="tryhackme-section animate-text">
+                <h2>TryHackMe Profile</h2>
+               <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=3691344" style='border:none;'></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.animate-text');
+            elements.forEach((element, index) => {
+                element.style.animationDelay = `${index * 0.3}s`;
+            });
+        });
+    </script>
+</body>
+</html>
